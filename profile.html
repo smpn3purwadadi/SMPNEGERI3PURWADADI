@@ -125,6 +125,38 @@
         color: var(--dark-color);
       }
 
+      /* Styling for the hamburger menu button */
+      .menu-toggle {
+        display: none; /* Hide by default */
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+      }
+
+      .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--white-color);
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Hide links by default on mobile */
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
       /* Section & Card Styling */
       section {
         padding: 40px 20px;
@@ -208,6 +240,35 @@
         position: absolute;
         left: 0;
         font-size: 1.2em;
+      }
+
+      /* About Section Styling */
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .about-text {
+        flex: 1;
+        animation: fadeIn 1s ease-out; /* Animation */
+      }
+
+      .about-image {
+        flex: 1;
+        max-width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        animation: fadeIn 1s ease-out; /* Animation */
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       /* Gallery Styling */
@@ -376,13 +437,38 @@
 
       /* Responsive Design */
       @media (max-width: 768px) {
-        nav a {
-          display: block;
+        nav {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 15px 20px;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: var(--dark-color);
+          padding-top: 60px; /* Space for the logo/title */
+          transition: transform 0.3s ease-in-out;
+          transform: translateY(-100%);
+        }
+
+        .nav-links.active {
+          display: flex;
+          transform: translateY(0);
+        }
+
+        .nav-links a {
           padding: 15px 0;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        nav a:last-child {
-          border-bottom: none;
+
+        .menu-toggle {
+          display: flex;
         }
 
         .gallery-section .gallery {
@@ -397,6 +483,16 @@
 
         .social-icons {
           flex-wrap: wrap;
+        }
+
+        .about-content {
+          flex-direction: row;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .about-content {
+          flex-direction: row;
         }
       }
 
@@ -426,31 +522,49 @@
     </header>
 
     <nav>
-      <a href="#about">Tentang Sekolah</a>
-      <a href="#vision-mission">Visi & Misi</a>
-      <a href="#facilities">Fasilitas</a>
-      <a href="#gallery">Galeri</a>
-      <a href="#achievements">Prestasi</a>
-      <a href="#teachers">Data Guru</a>
-      <a href="#contact">Kontak</a>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">Tentang Sekolah</a>
+        <a href="#vision-mission">Visi & Misi</a>
+        <a href="#facilities">Fasilitas</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#achievements">Prestasi</a>
+        <a href="#teachers">Data Guru</a>
+        <a href="#contact">Kontak</a>
+      </div>
     </nav>
 
     <section id="about" class="about content-card">
       <h2>Tentang SMP Negeri 3 Purwadadi</h2>
-      <p>
-        SMP Negeri 3 Purwadadi adalah sekolah menengah pertama yang terletak di
-        Desa Parapatan, Kecamatan Purwadadi, Kabupaten Subang, Jawa Barat.
-        Didirikan dengan tujuan untuk menciptakan siswa-siswa yang berkompeten
-        dalam berbagai bidang akademik dan non-akademik. Dengan fasilitas
-        lengkap dan tenaga pendidik yang profesional, SMP Negeri 3 Purwadadi
-        berkomitmen untuk memberikan pendidikan yang berkualitas kepada generasi
-        penerus bangsa.
-      </p>
-      <p>
-        Kami memiliki kurikulum yang sesuai dengan perkembangan zaman, dengan
-        mengutamakan pembentukan karakter dan keterampilan siswa untuk siap
-        menghadapi tantangan masa depan.
-      </p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            SMP Negeri 3 Purwadadi adalah sekolah menengah pertama yang terletak
+            di Desa Parapatan, Kecamatan Purwadadi, Kabupaten Subang, Jawa
+            Barat. Didirikan dengan tujuan untuk menciptakan siswa-siswa yang
+            berkompeten dalam berbagai bidang akademik dan non-akademik. Dengan
+            fasilitas lengkap dan tenaga pendidik yang profesional, SMP Negeri 3
+            Purwadadi berkomitmen untuk memberikan pendidikan yang berkualitas
+            kepada generasi penerus bangsa.
+          </p>
+          <p>
+            Kami memiliki kurikulum yang sesuai dengan perkembangan zaman,
+            dengan mengutamakan pembentukan karakter dan keterampilan siswa
+            untuk siap menghadapi tantangan masa depan.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="products/bb.jpeg"
+            alt="Gedung SMP Negeri 3 Purwadadi"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
 
     <section id="vision-mission" class="vision-mission content-card">
@@ -870,7 +984,14 @@
       document.querySelectorAll(".content-card").forEach((card) => {
         observer.observe(card);
       });
+
+      // JavaScript for the hamburger menu
+      const menuToggle = document.getElementById("mobile-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
-
