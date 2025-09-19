@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Sekolah SMP</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      .btn:hover {
+        background-color: #45a049;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+      }
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .card h2 {
+        color: #333;
+      }
+      .card p {
+        color: #666;
+        font-size: 14px;
+        margin: 15px 0;
+      }
+      .card .read-more {
+        color: #4caf50;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .card .read-more:hover {
+        text-decoration: underline;
+      }
+      .sidebar {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        width: 250px;
+        margin-right: 20px;
+        border-radius: 5px;
+      }
+      .sidebar h3 {
+        color: #fff;
+      }
+      .sidebar a {
+        display: block;
+        color: #ddd;
+        text-decoration: none;
+        padding: 8px 0;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      .sidebar a:hover {
+        background-color: #575757;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+          align-items: center;
+        }
+        .sidebar {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Blog Sekolah SMP</h1>
+      <p>Selamat datang di blog resmi Sekolah Menengah Pertama kami</p>
+    </header>
+
+    <!-- Main Content -->
+    <div style="display: flex; justify-content: center; padding: 20px">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Kategori Artikel</h3>
+        <a href="#">Pendidikan</a>
+        <a href="#">Kegiatan Sekolah</a>
+        <a href="#">Berita Sekolah</a>
+        <a href="#">Tips & Trik</a>
+        <a href="#">Ekstrakurikuler</a>
+      </div>
+
+      <!-- Artikel Cards -->
+      <div class="content">
+        <div class="card">
+          <img
+            src="https://via.placeholder.com/300x180"
+            alt="Thumbnail Artikel 1"
+          />
+          <h2>Artikel Terbaru 1: Belajar dengan Kreatif</h2>
+          <p>
+            Temukan berbagai informasi menarik seputar dunia pendidikan dan
+            aktivitas sekolah yang sangat bermanfaat. Kami percaya bahwa belajar
+            bisa menjadi lebih menyenangkan dan penuh kreativitas.
+          </p>
+          <a href="artikel1.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+        <div class="card">
+          <img
+            src="https://via.placeholder.com/300x180"
+            alt="Thumbnail Artikel 2"
+          />
+          <h2>Artikel Terbaru 2: Kegiatan Sekolah yang Seru</h2>
+          <p>
+            Dapatkan informasi terkini tentang kegiatan sekolah kami, dan
+            bagaimana siswa berperan aktif dalam berbagai kegiatan. Kami percaya
+            kegiatan di luar kelas juga sangat penting bagi pengembangan pribadi
+            siswa.
+          </p>
+          <a href="artikel2.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+        <div class="card">
+          <img
+            src="https://via.placeholder.com/300x180"
+            alt="Thumbnail Artikel 3"
+          />
+          <h2>Artikel Terbaru 3: Tips Meningkatkan Prestasi</h2>
+          <p>
+            Pelajari lebih dalam tentang cara-cara untuk meningkatkan prestasi
+            siswa di sekolah dalam artikel ini. Dapatkan tips yang dapat
+            diterapkan di rumah dan di sekolah untuk meraih hasil terbaik.
+          </p>
+          <a href="artikel3.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+        <div class="card">
+          <img
+            src="https://via.placeholder.com/300x180"
+            alt="Thumbnail Artikel 4"
+          />
+          <h2>Artikel Terbaru 4: Ekskul di Sekolah</h2>
+          <p>
+            Ekskul di sekolah bukan hanya untuk kesenangan, tetapi juga untuk
+            mengembangkan kemampuan diri siswa. Artikel ini mengulas beragam
+            ekstrakurikuler yang dapat diikuti oleh siswa.
+          </p>
+          <a href="artikel4.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Blog Sekolah SMP. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

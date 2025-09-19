@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koperasi Sederhana</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0f7fa;
+        color: #333;
+      }
+      header {
+        background-color: #0288d1;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #0288d1;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-container {
+        margin-bottom: 20px;
+        background-color: #f0f4f8;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+      }
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1em;
+      }
+      button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2em;
+        background-color: #0288d1;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 10px; /* Memberikan jarak antara tombol */
+      }
+      button:hover {
+        background-color: #0277bd;
+      }
+      #downloadBtn {
+        margin-top: 10px; /* Memberikan jarak antara tombol cetak dan tombol PDF */
+      }
+      .result-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+      .result-container p {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .result-container span {
+        font-weight: bold;
+        color: #0288d1;
+      }
+      footer {
+        background-color: #0288d1;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+      @media (max-width: 600px) {
+        .container {
+          width: 100%;
+          padding: 15px;
+        }
+        h1 {
+          font-size: 1.8em;
+        }
+      }
+    </style>
+
+    <!-- Menambahkan jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Koperasi Sederhana</h1>
+      <p>Website untuk Simpanan, THR, Pinjaman dan Piutang</p>
+    </header>
+
+    <div class="container">
+      <div class="form-container">
+        <h2>Form Transaksi</h2>
+        <form id="koperasiForm">
+          <label for="saldo">Saldo Awal</label>
+          <input
+            type="number"
+            id="saldo"
+            name="saldo"
+            placeholder="Masukkan saldo"
+            required
+          /><br />
+
+          <label for="thr">THR</label>
+          <input
+            type="number"
+            id="thr"
+            name="thr"
+            placeholder="Masukkan jumlah THR"
+            required
+          /><br />
+
+          <label for="pinjam">Pinjaman</label>
+          <input
+            type="number"
+            id="pinjam"
+            name="pinjam"
+            placeholder="Masukkan jumlah pinjaman"
+            required
+          /><br />
+
+          <label for="piutang">Piutang</label>
+          <input
+            type="number"
+            id="piutang"
+            name="piutang"
+            placeholder="Masukkan jumlah piutang"
+            required
+          /><br />
+
+          <button type="button" onclick="prosesTransaksi()">
+            Proses Transaksi
+          </button>
+        </form>
+      </div>
+
+      <div class="result-container">
+        <h2>Hasil Transaksi</h2>
+        <p><strong>Saldo Awal:</strong> <span id="result-saldo"></span></p>
+        <p><strong>THR yang Diterima:</strong> <span id="result-thr"></span></p>
+        <p><strong>Total Pinjaman:</strong> <span id="result-pinjam"></span></p>
+        <p><strong>Total Piutang:</strong> <span id="result-piutang"></span></p>
+        <p>
+          <strong>Saldo Akhir:</strong> <span id="result-saldo-akhir"></span>
+        </p>
+      </div>
+
+      <!-- Tombol untuk Cetak Halaman -->
+      <button id="printBtn" onclick="printPage()">Cetak Halaman</button>
+      <!-- Tombol untuk Cetak PDF -->
+      <button id="downloadBtn" onclick="downloadPDF()">Cetak PDF</button>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Koperasi Sederhana</p>
+    </footer>
+
+    <script>
+      function prosesTransaksi() {
+        // Mendapatkan inputan dari form
+        var saldo = parseFloat(document.getElementById("saldo").value);
+        var thr = parseFloat(document.getElementById("thr").value);
+        var pinjam = parseFloat(document.getElementById("pinjam").value);
+        var piutang = parseFloat(document.getElementById("piutang").value);
+
+        // Menghitung saldo akhir
+        var saldoAkhir = saldo + thr - pinjam + piutang;
+
+        // Menampilkan hasil
+        document.getElementById("result-saldo").innerText =
+          "Rp " + saldo.toLocaleString();
+        document.getElementById("result-thr").innerText =
+          "Rp " + thr.toLocaleString();
+        document.getElementById("result-pinjam").innerText =
+          "Rp " + pinjam.toLocaleString();
+        document.getElementById("result-piutang").innerText =
+          "Rp " + piutang.toLocaleString();
+        document.getElementById("result-saldo-akhir").innerText =
+          "Rp " + saldoAkhir.toLocaleString();
+      }
+
+      // Fungsi untuk mencetak halaman
+      function printPage() {
+        window.print();
+      }
+
+      // Fungsi untuk mengunduh PDF
+      function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Menambahkan judul ke PDF
+        doc.setFontSize(16);
+        doc.text("Laporan Koperasi Sederhana", 14, 20);
+
+        // Menambahkan informasi transaksi ke PDF
+        doc.setFontSize(12);
+        doc.text(
+          "Saldo Awal: Rp " + document.getElementById("result-saldo").innerText,
+          14,
+          40
+        );
+        doc.text(
+          "THR yang Diterima: Rp " +
+            document.getElementById("result-thr").innerText,
+          14,
+          50
+        );
+        doc.text(
+          "Pinjaman: Rp " + document.getElementById("result-pinjam").innerText,
+          14,
+          60
+        );
+        doc.text(
+          "Piutang: Rp " + document.getElementById("result-piutang").innerText,
+          14,
+          70
+        );
+        doc.text(
+          "Saldo Akhir: Rp " +
+            document.getElementById("result-saldo-akhir").innerText,
+          14,
+          80
+        );
+
+        // Download file PDF
+        doc.save("Laporan_Koperasi_Sederhana.pdf");
+      }
+    </script>
+  </body>
+</html>

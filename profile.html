@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Sekolah - SMP Negeri 3 Purwadadi</title>
+
+    <!-- Link to Font Awesome for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-color: #4caf50;
+        background-image: url("products/bb.jpeg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 20px; /* Increased padding to fit the resized image */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      header h1 {
+        font-size: 4rem; /* Larger font size */
+        margin: 0;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      header p {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        font-style: italic;
+        font-weight: lighter;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #575757;
+      }
+      section {
+        padding: 20px;
+      }
+      .about,
+      .facilities,
+      .vision-mission,
+      .gallery,
+      .achievements {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .about h2,
+      .facilities h2,
+      .vision-mission h2,
+      .gallery h2,
+      .achievements h2 {
+        color: #4caf50;
+      }
+      .about p,
+      .facilities p,
+      .vision-mission p,
+      .gallery p,
+      .achievements p {
+        color: #666;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .gallery div {
+        margin-bottom: 20px;
+      }
+      .achievements ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .achievements li {
+        margin-bottom: 10px;
+      }
+      .contact {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      td {
+        text-align: center;
+      }
+
+      /* Social Media Icons */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .social-icons a {
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #333;
+        transition: background-color 0.3s;
+      }
+      .social-icons a:hover {
+        background-color: #575757;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Profil SMP Negeri 3 Purwadadi</h1>
+      <p>Menjadi Sekolah Unggul yang Mempersiapkan Generasi Penerus Bangsa</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#about">Tentang Sekolah</a>
+      <a href="#vision-mission">Visi & Misi</a>
+      <a href="#facilities">Fasilitas</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#achievements">Prestasi</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>Tentang SMP Negeri 3 Purwadadi</h2>
+      <p>
+        SMP Negeri 3 Purwadadi adalah sekolah menengah pertama yang terletak di
+        Desa Parapatan, Kecamatan Purwadadi, Kabupaten Subang, Jawa Barat.
+        Didirikan dengan tujuan untuk menciptakan siswa-siswa yang berkompeten
+        dalam berbagai bidang akademik dan non-akademik. Dengan fasilitas
+        lengkap dan tenaga pendidik yang profesional, SMP Negeri 3 Purwadadi
+        berkomitmen untuk memberikan pendidikan yang berkualitas kepada generasi
+        penerus bangsa.
+      </p>
+      <p>
+        Kami memiliki kurikulum yang sesuai dengan perkembangan zaman, dengan
+        mengutamakan pembentukan karakter dan keterampilan siswa untuk siap
+        menghadapi tantangan masa depan.
+      </p>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="vision-mission">
+      <h2>Visi & Misi</h2>
+      <h3>Visi</h3>
+      <p>
+        Terwujudnya pelajar pancasila yang beretika, berwawasan global dan
+        terampil berdasarkan imtak dan berwawasan lingkungan
+      </p>
+      <h3>Misi</h3>
+      <ul>
+        <li>
+          Menanamkan keimanan dan ke taqwaan melaui pengamalan ajaran agama
+        </li>
+        <li>Menumbuhkan sikap santun</li>
+        <li>Menumbuhkan rasa kesetiakawanan Sosial sesama teman</li>
+        <li>Mengoptimalkan proses Pembelajaran dan bimmbingan Konseling</li>
+        <li>
+          Menciptakan dan Menumbuhkan kedisiplinan dalam belajar dengan penuh
+          tanggung jawab
+        </li>
+        <li>Menciptakan suasana belajar yang menyenangkan</li>
+        <li>
+          Menjalin Kerja sama yang Harmonis antar warga sekolah, dan lembaga
+          yang terkait
+        </li>
+      </ul>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities">
+      <h2>Fasilitas Sekolah</h2>
+      <p>
+        SMP Negeri 3 Purwadadi menyediakan berbagai fasilitas yang mendukung
+        kegiatan belajar mengajar dan pengembangan diri siswa. Beberapa
+        fasilitas yang kami miliki antara lain:
+      </p>
+      <ul>
+        <li>Ruang Kelas yang Nyaman dan Modern</li>
+        <li>Laboratorium IPA yang Lengkap</li>
+        <li>Laboratorium Komputer</li>
+        <li>Perpustakaan dengan Koleksi Buku yang Beragam</li>
+        <li>Fasilitas Olahraga (Lapangan Basket, Sepak Bola, dll)</li>
+        <li>Ruang Ekstrakurikuler untuk Berbagai Kegiatan Siswa</li>
+        <li>Kantin yang Menyediakan Makanan Sehat</li>
+        <li>Wi-Fi Gratis untuk Mendukung Pembelajaran Daring</li>
+      </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <h2>Galeri Sekolah</h2>
+      <p>
+        Berikut adalah beberapa foto yang menggambarkan kegiatan dan suasana di
+        SMP Negeri 3 Purwadadi:
+      </p>
+      <div id="gallery-images">
+        <div>
+          <img src="products/g.jpeg" alt="Kegiatan Belajar Mengajar" />
+          <p>Bersih Bersih Kelas</p>
+        </div>
+        <div>
+          <img src="products/a1.jpeg" alt="Kegiatan Ekstrakurikuler" />
+          <p>Makan Gratis.</p>
+        </div>
+        <div>
+          <img src="products/a.jpeg" alt="Kegiatan Ekstrakurikuler" />
+          <p>Isra Mi'raj.</p>
+        </div>
+        <div>
+          <img src="products/b.jpeg" alt="Kegiatan Ekstrakurikuler" />
+          <p>Isra Mi'raj.</p>
+        </div>
+        <div>
+          <img src="products/f.jpeg" alt="Kegiatan Ekstrakurikuler" />
+          <p>Isra Mi'raj.</p>
+        </div>
+      </div>
+      <button onclick="prevImage()">Previous</button>
+      <button onclick="nextImage()">Next</button>
+    </section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+      <h2>Prestasi Siswa dan Siswi</h2>
+      <p>
+        SMP Negeri 3 Purwadadi bangga dengan berbagai prestasi yang telah diraih
+        oleh siswa dan siswi kami dalam berbagai bidang, baik akademik maupun
+        non-akademik. Berikut adalah beberapa prestasi yang telah kami raih:
+      </p>
+      <ul>
+        <li>Stay Tuned—Coming Soon!</li>
+        <li>Stay Tuned—Coming Soon!</li>
+        <li>Stay Tuned—Coming Soon!</li>
+        <li>Stay Tuned—Coming Soon!</li>
+        <li>Stay Tuned—Coming Soon!</li>
+        <li>Stay Tuned—Coming Soon!</li>
+      </ul>
+    </section>
+
+    <section id="teachers" class="teachers">
+      <h2>Data Guru</h2>
+      <p>
+        Berikut adalah data beberapa guru yang mengajar di SMP Negeri 3
+        Purwadadi:
+      </p>
+      <table id="teachers-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Guru</th>
+            <th>Mata Pelajaran</th>
+            <th>Jabatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Teachers Data will be dynamically loaded here -->
+        </tbody>
+      </table>
+      <div>
+        <button onclick="prevPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Kontak Section -->
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>Untuk informasi lebih lanjut, silakan hubungi kami melalui:</p>
+      <p>
+        <strong>Alamat:</strong> Jl. Raya Parapatan, Purwadadi, Kabupaten
+        Subang, Jawa Barat
+      </p>
+      <p><strong>Telepon:</strong>0838-1709-0173</p>
+      <p><strong>Email:</strong> smpn3purwdadi@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/spen3pur" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/osissmpn3purwadadi?igsh=YzljYTk1ODg3Zg=="
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/62838-1709-0173" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a
+          href="https://youtu.be/BAIUeRmplPk?si=8USFKqyeVbvqbLNG"
+          target="_blank"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 SMP Negeri 3 Purwadadi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const teachersData = [
+        {
+          no: 1,
+          name: "Drs. Sulatriyana, SH., M.MPd",
+          subject: "-",
+          position: "Kepala Sekolah",
+        },
+        {
+          no: 2,
+          name: "Bayu Herawansyah, S.Pd",
+          subject: "PJOK",
+          position: "GURU",
+        },
+        {
+          no: 3,
+          name: "Nurdin, S.PdI",
+          subject: "Pendidikan Agama Islam",
+          position: "GURU",
+        },
+        {
+          no: 4,
+          name: "Hj. Acih Sugiarsih, S.Pd",
+          subject: "IPA",
+          position: "GURU",
+        },
+        {
+          no: 5,
+          name: "Neni Nurlaeni, S.Pd",
+          subject: "Bahasa Indonesia",
+          position: "GURU",
+        },
+        {
+          no: 6,
+          name: "Enung Azizah, S.PdI",
+          subject: "PAI",
+          position: "GURU",
+        },
+        {
+          no: 7,
+          name: "Hj. Ika Tejamurti, S.Pd",
+          subject: "PKN",
+          position: "GURU",
+        },
+        { no: 8, name: "Kurniawati, S.E", subject: "IPS", position: "GURU" },
+        {
+          no: 9,
+          name: "Ipat Fatimah, M.Pd",
+          subject: "Bahasa Inggris",
+          position: "GURU",
+        },
+        {
+          no: 10,
+          name: "Mokhamad Kurdianto, S.Pd",
+          subject: "Matematika",
+          position: "GURU",
+        },
+        {
+          no: 11,
+          name: "Hj. Asut Sutarasa, SE",
+          subject: "IPS",
+          position: "GURU",
+        },
+        { no: 12, name: "Nurhayani, SE", subject: "TIK", position: "GURU" },
+        {
+          no: 13,
+          name: "Dede Suhendar, S.Pd",
+          subject: "Matematika",
+          position: "GURU",
+        },
+        {
+          no: 14,
+          name: "Lilis Adinurmalasari, S.Pd",
+          subject: "Bahasa Indonesia",
+          position: "GURU",
+        },
+        {
+          no: 15,
+          name: "Nunung Nurhikmah, SE",
+          subject: "Prakarya",
+          position: "GURU",
+        },
+        {
+          no: 16,
+          name: "Edi Heryanto, S.Pd",
+          subject: "TIK & Inggris",
+          position: "GURU",
+        },
+        {
+          no: 17,
+          name: "Ira Irawati Iriani, S.Pd",
+          subject: "Matematika",
+          position: "GURU",
+        },
+        {
+          no: 18,
+          name: "Nelawati, S.Pd",
+          subject: "Bahasa Inggris",
+          position: "GURU",
+        },
+        {
+          no: 19,
+          name: "Afifah Khaerun Nisa, S.Pd",
+          subject: "IPA",
+          position: "GURU",
+        },
+        {
+          no: 20,
+          name: "Rizal Wahyuda, S.Tr.Sn",
+          subject: "SBY",
+          position: "GURU",
+        },
+        {
+          no: 21,
+          name: "Widia Nita L. S.Pd",
+          subject: "Belum Tersedia",
+          position: "GURU",
+        },
+        {
+          no: 22,
+          name: "Rusmita, A.Ma",
+          subject: "PAI",
+          position: "GURU",
+        },
+        {
+          no: 23,
+          name: "Bawon Sumiati, S.Pd",
+          subject: "Bahasa Inggris",
+          position: "GURU",
+        },
+        {
+          no: 24,
+          name: "Diat Bachtiar, S.Pd",
+          subject: "IPA",
+          position: "GURU",
+        },
+        {
+          no: 25,
+          name: "Ujang Rohmanudin, S.Pd",
+          subject: "Bahasa Inggris",
+          position: "GURU",
+        },
+        {
+          no: 26,
+          name: "Mamay Maesaroh, S.Pd",
+          subject: "Bahasa Inggris",
+          position: "GURU",
+        },
+        {
+          no: 27,
+          name: "Filma Alvionita, S.Pd",
+          subject: "Bahasa Indonesia",
+          position: "GURU",
+        },
+        {
+          no: 28,
+          name: "Soni Nugraha, S.Tr.Sn",
+          subject: "SBY",
+          position: "GURU",
+        },
+        {
+          no: 29,
+          name: "Asep Rifki Aulia E. S.Pd",
+          subject: "Bahasa Inggris",
+          position: "GURU",
+        },
+        {
+          no: 30,
+          name: "Dewi Nurkarimah, S.Pd",
+          subject: "Belum Tersedia",
+          position: "GURU",
+        },
+        {
+          no: 31,
+          name: "Wega Mawarni, S.Pd",
+          subject: "Belum Tersedia",
+          position: "GURU",
+        },
+        {
+          no: 32,
+          name: "Rahayu, S.Pd",
+          subject: "Belum Tersedia",
+          position: "GURU",
+        },
+        {
+          no: 33,
+          name: "Rahmat, S.Pd",
+          subject: "PJOK",
+          position: "GURU",
+        },
+        {
+          no: 34,
+          name: "Irma Dewi, S.Pd",
+          subject: "Belum Tersedia",
+          position: "GURU",
+        },
+        {
+          no: 36,
+          name: "Diah Sri Rahayu, S.Pd",
+          subject: "Belum Tersedia",
+          position: "GURU",
+        },
+        {
+          no: 37,
+          name: "Amsir Wiguna,S.Pd",
+          subject: "-",
+          position: "TENAGA TATA USAHA",
+        },
+        {
+          no: 38,
+          name: "Beni Nuryahya, Amd.Kom",
+          subject: "-",
+          position: "TENAGA TATA USAHA",
+        },
+        {
+          no: 39,
+          name: "Resti",
+          subject: "-",
+          position: "TENAGA TATA USAHA",
+        },
+      ];
+
+      let currentPage = 1;
+      const rowsPerPage = 10;
+
+      function displayTeachersData(page) {
+        const start = (page - 1) * rowsPerPage;
+        const end = page * rowsPerPage;
+        const teachersToDisplay = teachersData.slice(start, end);
+
+        const tableBody = document.querySelector("#teachers-table tbody");
+        tableBody.innerHTML = "";
+        teachersToDisplay.forEach((teacher) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${teacher.no}</td>
+            <td>${teacher.name}</td>
+            <td>${teacher.subject}</td>
+            <td>${teacher.position}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      function nextPage() {
+        if (currentPage < Math.ceil(teachersData.length / rowsPerPage)) {
+          currentPage++;
+          displayTeachersData(currentPage);
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          displayTeachersData(currentPage);
+        }
+      }
+
+      // Initial display
+      displayTeachersData(currentPage);
+    </script>
+
+    <script>
+      var currentImageIndex = 0;
+      var images = [
+        "products/bb.jpeg",
+        "products/bc.jpeg",
+        "products/g.jpeg",
+        "products/a1.jpeg",
+        "products/a.jpeg",
+        "products/b.jpeg",
+        "products/f.jpeg",
+      ];
+
+      function nextImage() {
+        if (currentImageIndex < images.length - 1) {
+          currentImageIndex++;
+        } else {
+          currentImageIndex = 0;
+        }
+        updateGallery();
+      }
+
+      function prevImage() {
+        if (currentImageIndex > 0) {
+          currentImageIndex--;
+        } else {
+          currentImageIndex = images.length - 1;
+        }
+        updateGallery();
+      }
+
+      function updateGallery() {
+        var galleryImages = document.getElementById("gallery-images");
+        galleryImages.innerHTML = `
+      <div>
+        <img src="${images[currentImageIndex]}" alt="Gallery Image" />
+        <p>Image ${currentImageIndex + 1}</p>
+      </div>`;
+      }
+    </script>
+  </body>
+</html>

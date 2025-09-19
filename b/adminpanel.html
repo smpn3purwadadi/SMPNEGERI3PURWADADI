@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - SMP N 3 Purwadadi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .navbar {
+        background-color: #4caf50;
+      }
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        color: white !important;
+      }
+      .container {
+        margin-top: 30px;
+      }
+      .section-title {
+        color: #4caf50;
+      }
+      .form-control {
+        border-radius: 5px;
+      }
+      .card-header {
+        background-color: #4caf50;
+        color: white;
+      }
+      .btn-primary {
+        background-color: #4caf50;
+        border-color: #4caf50;
+      }
+      .btn-primary:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Admin Panel SMP N 3 Purwadadi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang Sekolah</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#facilities">Fasilitas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Prestasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Dashboard -->
+      <div id="dashboard" class="section">
+        <h2 class="section-title">Dashboard</h2>
+        <p>
+          Selamat datang di panel admin SMP N 3 Purwadadi. Pilih menu di atas
+          untuk mengelola konten.
+        </p>
+      </div>
+
+      <!-- About Section -->
+      <div id="about" class="section">
+        <div class="card">
+          <div class="card-header">Edit Tentang Sekolah</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="about-title" class="form-label">Judul</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="about-title"
+                  placeholder="Masukkan Judul Sekolah"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="about-description" class="form-label"
+                  >Deskripsi</label
+                >
+                <textarea
+                  class="form-control"
+                  id="about-description"
+                  rows="4"
+                  placeholder="Masukkan Deskripsi Sekolah"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facilities Section -->
+      <div id="facilities" class="section">
+        <div class="card">
+          <div class="card-header">Edit Fasilitas Sekolah</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="facilities-title" class="form-label"
+                  >Judul Fasilitas</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="facilities-title"
+                  placeholder="Masukkan Judul Fasilitas"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="facilities-description" class="form-label"
+                  >Deskripsi</label
+                >
+                <textarea
+                  class="form-control"
+                  id="facilities-description"
+                  rows="4"
+                  placeholder="Masukkan Deskripsi Fasilitas"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <div id="gallery" class="section">
+        <div class="card">
+          <div class="card-header">Edit Galeri Sekolah</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="gallery-title" class="form-label"
+                  >Judul Galeri</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gallery-title"
+                  placeholder="Masukkan Judul Galeri"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="gallery-description" class="form-label"
+                  >Deskripsi</label
+                >
+                <textarea
+                  class="form-control"
+                  id="gallery-description"
+                  rows="4"
+                  placeholder="Masukkan Deskripsi Galeri"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="gallery-image" class="form-label"
+                  >Upload Gambar</label
+                >
+                <input type="file" class="form-control" id="gallery-image" />
+              </div>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements Section -->
+      <div id="achievements" class="section">
+        <div class="card">
+          <div class="card-header">Edit Prestasi Sekolah</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="achievement-title" class="form-label"
+                  >Judul Prestasi</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="achievement-title"
+                  placeholder="Masukkan Judul Prestasi"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="achievement-description" class="form-label"
+                  >Deskripsi Prestasi</label
+                >
+                <textarea
+                  class="form-control"
+                  id="achievement-description"
+                  rows="4"
+                  placeholder="Masukkan Deskripsi Prestasi"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div id="contact" class="section">
+        <div class="card">
+          <div class="card-header">Edit Kontak Sekolah</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="contact-address" class="form-label">Alamat</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact-address"
+                  placeholder="Masukkan Alamat"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contact-phone" class="form-label"
+                  >Nomor Telepon</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact-phone"
+                  placeholder="Masukkan Nomor Telepon"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contact-email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="contact-email"
+                  placeholder="Masukkan Email"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
